@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ThemeService } from '../theme/theme.service';
+import { Observable } from 'rxjs';
+import { ThemeService } from '../shared/service/theme.service';
 
 @Component({
    selector: 'header',
@@ -7,20 +8,16 @@ import { ThemeService } from '../theme/theme.service';
    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+   readonly darkMode$: Observable<boolean> = this._themeService.darkThemeSubject;
    constructor(
-      private _themeService: ThemeService
+      private _themeService: ThemeService,
    ) {
 
    }
 
-   public switchTheme() {
-      let active = this._themeService.getActiveTheme();
-      if (active == "lightTheme") {
-         this._themeService.setTheme('darkTheme');
-      }else{
-         this._themeService.setTheme('lightTheme');
-      }
+   public onToggle() {
+      this._themeService.onToggle();
    }
+
 
 }

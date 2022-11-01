@@ -6,10 +6,10 @@
      </button>
      <div class="collapse navbar-collapse" id="navbarText">
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-         <li (click)="switchTheme()" class="d-flex mt-2" >
+         <li  class="d-flex mt-2" >
             <span>تیره</span>
             <div class="form-check form-switch">
-               <input class="form-check-input" type="checkbox" role="switch">
+               <input class="form-check-input" type="checkbox" role="switch" (change)="onToggle()">
             </div>
             <span>روشن</span>
          </li>

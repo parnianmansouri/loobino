@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ThemeService } from './theme/theme.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { ThemeService } from './theme/theme.service';
     AppRoutingModule
   ],
   providers: [
-    ThemeService 
   ],
   bootstrap: [AppComponent]
 })
