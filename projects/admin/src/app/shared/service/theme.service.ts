@@ -31,7 +31,7 @@ export class ThemeService {
     public onToggle() {
         console.log('onToggle');
         
-        this.darkThemeSubject$.getValue() ? this._disable : this._enable();
+        this.darkThemeSubject$.getValue() ? this._disable() : this._enable();
     
         
         
@@ -60,7 +60,7 @@ export class ThemeService {
 
     private _SetDarkThemeToLocalStorage(darkMode: boolean) {
         let set=localStorage.setItem(this.options.storageKey, JSON.stringify({ darkMode }));
-        console.log('st',set);
+        console.log('darkMode',this.options.storageKey, darkMode);
         
     }
 
