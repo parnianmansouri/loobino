@@ -35,11 +35,11 @@
             ],
             "styles": [
               "projects/admin/src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./loobino/bootstrap-4.0.0-rtl/scss/_variables.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap-v4-rtl/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
